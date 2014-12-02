@@ -1,5 +1,5 @@
 ﻿Data ; Horas Trabalhadas ; Tipo Tarefa ; Descrição da Tarefa Realizada
-
+21/NOV/2014; 1h; Estudar; ler os módulos Cespdin
 01/DEZ/2014; 2h; Codificar Módulo; Codifiquei múltiplos módulos
 01/DEZ/2014; 3h; Revisar módulo; Revisei instrumentação
 

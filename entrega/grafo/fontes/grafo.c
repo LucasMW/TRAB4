@@ -14,7 +14,8 @@
 *  $HA Histórico de evolução:
 *     Versão  Autor    Data     Observações
 *     1       LM,LS   22/SET/2014 início desenvolvimento
-*	  2		  LM,LS	  23/OUT/2014 início da melhoria do módulo	
+*	  2		  LM,LS	  23/OUT/2014 início da melhoria do módulo
+*	  3		  LM,LS	  01/DEZ/2014 Início da instrumentação
 ***************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,7 +26,12 @@
 #include "grafo.h"
 #undef GRA_OWN
 
-
+#ifdef _DEBUG
+#include "generico.h"
+#include "cespdin.h"
+#include "..\\tabelas\\TiposEspacosGrafo.def"
+#include "conta.h"
+#endif
 
 /***********************************************************************
 *
@@ -92,6 +98,100 @@
 
    static int IdExisteJa( GRA_tppGrafo grafo, int id );
    static void visit(GRA_noGrafo noCorr,int* visited,int tam,int* ordened);
+
+
+
+#ifdef _DEBUG
+   /***** Código das funções de instrumentação *****/
+GRA_tpCondRet GRA_Verifica ( GRA_tppGrafo grafo, int * numErros)
+{
+
+	 int achou, qtd = 0, somaTam = 0;
+	 GRA_noGrafo no;
+	 GRA_tpAresta aresta;
+
+	 *numErros = 0;
+
+	 CNT_CONTAR( "VerificarGrafo" );
+	   
+	 do 
+	 {  
+		CNT_CONTAR ( "Verificar Nos");
+		no = (GRA_noGrafo)LIS_ObterValor(grafo->pVertices);
+		if ( no == NULL){
+			CNT_CONTAR ( "No nulo");
+			numErros++;
+			
+		}
+		else
+		{
+			if ( grafo->idCorrente != no->verticeId){
+				CNT_CONTAR( "Erro no ID corrente");
+				numErros++;
+			}
+
+			if(LIS_IrInicioLista(no->listaArestas)!=LIS_CondRetListaVazia)
+			{
+				do 
+				{
+				
+					aresta = (GRA_tpAresta)LIS_ObterValor(no->listaArestas);
+					if (aresta == NULL){
+						CNT_CONTAR ("Aresta nula");
+						numErros++;
+					}
+				}while(LIS_AvancarElementoCorrente(no->listaArestas,1)!=LIS_CondRetFimLista);
+			}
+		}
+		/* if */
+	}while(LIS_AvancarElementoCorrente(grafo->pVertices,1)!=LIS_CondRetFimLista);
+}
+#endif
+
+#ifdef _DEBUG
+void GRA_Deturpar( GRA_tppGrafo grafo, GRA_tpModoDeturpacao modoDeturpar)
+{
+	
+
+switch (modoDeturpar)
+{
+/* tipos */
+case DeturpaTipoGrafo:
+CED_DefinirTipoEspaco(grafo, CED_ID_TIPO_VALOR_NULO);
+break;
+case DeturpaTipoListaVertices:
+CED_DefinirTipoEspaco(grafo->pVertices, CED_ID_TIPO_VALOR_NULO);
+break;
+case DeturpaTipoListaOrigens:
+	CED_DefinirTipoEspaco(grafo->pOrigens, CED_ID_TIPO_VALOR_NULO);
+break;
+case DeturpaTipoIdCorrente:
+	CED_DefinirTipoEspaco(&grafo->idCorrente, CED_ID_TIPO_VALOR_NULO);
+break;
+/* ponteiro nulo */
+case DeturpaPtGrafoNulo:
+grafo=NULL;
+break;
+case DeturpaPtVerticesNulo:
+	grafo->pVertices=NULL;
+break;
+case DeturpaPtOrigensNulo:
+	grafo->pVertices=NULL;
+break;
+case DeturpaIdCorrenteZero:
+	grafo->idCorrente=0;
+case DeturpaIdCorrenteNegativo:
+	grafo->idCorrente=-1;
+break;
+break;
+
+}
+}
+#endif
+
+
+
+
 /*****  Código das funções exportadas pelo módulo  *****/
 
 
@@ -117,6 +217,14 @@ GRA_tpCondRet GRA_CriarGrafo( GRA_tppGrafo* refgrafo,  void   ( * ExcluirValor )
 	/* Não houve problemas , retorne OK */
 	tempgraf->idCorrente = 0;
 	*refgrafo=tempgraf; //return by reference
+
+#ifdef _DEBUG
+CED_DefinirTipoEspaco(tempgraf, GRA_TipoEspacoGrafo);
+CED_DefinirTipoEspaco(tempgraf->pVertices, GRA_TipoEspacoLista);
+CED_DefinirTipoEspaco(tempgraf->pOrigens, GRA_TipoEspacoLista);
+CED_DefinirTipoEspaco(&tempgraf->idCorrente, GRA_TipoEspacoInteiro);
+#endif
+
 	return GRA_CondRetOK;
 }
 
@@ -136,6 +244,7 @@ GRA_tpCondRet GRA_DestruirGrafo( GRA_tppGrafo grafo )
 	grafo->pVertices=NULL;
 	free(grafo);
 	grafo=NULL; //never be acessed again
+	
 	return GRA_CondRetOK;
 }	 
 /* Fim função: GRA  &Destruir grafo */
@@ -178,6 +287,9 @@ GRA_tpCondRet   GRA_InserirNo ( GRA_tppGrafo grafo, void * pInfo, int * pNoId)
 	LIS_InserirElementoApos(grafo->pOrigens,novaOrigem); //Linka a componente conexa ao novo nó sem arestas
 	grafo->idCorrente = id;
 	*pNoId = id;
+	#ifdef _DEBUG
+    CED_DefinirTipoEspaco(novoNo, GRA_TipoEspacoVertice);
+	#endif
 	return GRA_CondRetOK;
 }
 
@@ -315,6 +427,10 @@ GRA_tpCondRet  GRA_InserirAresta( GRA_tppGrafo grafo, int node_i, int node_j, in
 
 	LIS_InserirElementoApos(noDestino->listaArestas, aresta2);
 	
+	#ifdef _DEBUG
+    CED_DefinirTipoEspaco(aresta1, GRA_TipoEspacoAresta);
+	CED_DefinirTipoEspaco(aresta2, GRA_TipoEspacoAresta);
+	#endif
 	
 
 	return GRA_CondRetOK;

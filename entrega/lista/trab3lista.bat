@@ -1,1 +1,0 @@
-trab3-4.exe /sTesteLista.script >output.log

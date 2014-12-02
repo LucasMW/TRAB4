@@ -7,7 +7,7 @@
 *
 * Nome da base de software: Arcabouço para a automação de testes de programas redigidos em C
 *
-* Projeto: INF 1301 Trabalho 3
+* Projeto: INF 1301 Trabalho 4
 * Gestor: LES/DI/PUC-Rio
 * Autores:  Lucas Menezes <LM>, Lorenzo Saraiva <LS>
 *
@@ -15,6 +15,7 @@
 * Versão Autor Data Observações
 * 1     LM,LS 22/set/2014 Início do Desenvolvimento
 * 2		LM,LS 23/OUT/2014 início da melhoria do módulo
+* 3		LM,LS 01/DEZ/2014 Início da instrumentação
 * $ED Descrição do módulo
 * Implementa Um grafo genérico não dirigido, i.e. , 
 * (para todo nó A e B) A está ligado em B <=> B está ligado em A.
@@ -75,6 +76,32 @@ typedef enum {
 		GRA_CondRetCaminhoNaoExiste
 			/* Não há caminho entre os dois vértices */
    } GRA_tpCondRet ;
+
+#ifdef _DEBUG
+/* Declarações dos simbolos de instrumentação */
+typedef enum
+{
+DeturpaTipoGrafo = 1,
+/* Modifica o tipo do Grafo */
+DeturpaTipoListaVertices = 2,
+/* Modifica o tipo da Lista De vértices */
+DeturpaTipoListaOrigens = 3,
+/* Modifica o tipo da Lista de Origens */
+DeturpaTipoIdCorrente = 4,
+/* Modifica o tipo do Id corrente */
+DeturpaPtGrafoNulo = 5,
+/* Anula ponteiro do grafo */
+DeturpaPtVerticesNulo = 6,
+/* Anula ponteiro dos vértices do grafo */
+DeturpaPtOrigensNulo = 7,
+/* Anula ponteiro da lista de origens */
+DeturpaIdCorrenteZero = 8,
+/* Torna o id corrente zero */
+DeturpaIdCorrenteNegativo =9
+/* Torna o Id corrente Negativo */
+
+} GRA_tpModoDeturpacao;
+#endif
 /***********************************************************************
 *
 *  $FC Função: GRA  &Criar grafo
