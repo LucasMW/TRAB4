@@ -1,0 +1,1 @@
+trab1lista.exe /smeuTeste.script >MeuOut.log

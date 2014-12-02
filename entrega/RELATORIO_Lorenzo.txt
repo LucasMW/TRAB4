@@ -1,0 +1,5 @@
+﻿Data ; Horas Trabalhadas ; Tipo Tarefa ; Descrição da Tarefa Realizada
+
+
+01/DEZ/2014; 3h; Codificar módulo; Contrução do Verificador
+

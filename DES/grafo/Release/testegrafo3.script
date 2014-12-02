@@ -1,0 +1,69 @@
+== declarar grafos
+
+=declararparm   grafo1  int 1
+=declararparm   grafo2  int 2
+=declararparm   grafo3  int 3
+=declararparm   grafo4  int 4
+=declararparm   grafo5  int 5
+=declararparm   grafo6  int 6
+=declararparm   grafo7  int 7
+=declararparm   grafo8  int 8
+
+==Declarar Ponteiros
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+==Declarar CondRets
+=declararparm   OK             	int  0
+=declararparm   FatouMemoria    int  1
+=declararparm   Vazio       	int  2
+=declararparm	ArestaJaExiste	int  3
+=declararparm	NoNaoExiste	int  4
+=declararparm	ArestaNaoExiste	int  5
+=declararparm	JaEsta		int 6 
+=declararparm 	CaminhoExiste 	int 7
+=declararparm 	CaminhoNaoExiste int 8
+
+==Declarar Strings
+=declararparm   str0    string  "abcdefg"
+=declararparm   str1    string  "qwerty"
+=declararparm   str2    string  "xxx"
+=declararparm   str3    string  "xpto"
+
+==criar grafo1
+
+=criargrafo grafo1
+=criargrafo grafo2
+=criargrafo grafo3
+=criargrafo grafo4
+=criargrafo grafo5
+
+==Ezvaziar Grafo
+=esvaziargrafo grafo3 Vazio
+
+==Testes com Grafo vazio
+=excluirno      grafo3 10 Vazio
+=irpara		    grafo3 10 Vazio
+=imprimirgrafo  grafo1 Vazio
+=irvizinho      grafo1 Vazio 1
+=excluirno	    grafo2 0 Vazio
+=obteridcorr    grafo2 Vazio 0 0
+=inseriraresta  grafo2 17 16 0 Vazio
+=excluiraresta  grafo2 1 8 Vazio
+=obtervalorno   grafo2 1 str2 Vazio
+=recuperar
+=obtervalorcorr grafo2 str0 Vazio
+=recuperar
+
+==DestruirGrafo
+=destruirgrafo grafo3
+
+==Imprimir Grafo
+
+=imprimirgrafo grafo2 Vazio
+=imprimirgrafo grafo4 Vazio
+=imprimirgrafo grafo5 Vazio
+
+
+
+

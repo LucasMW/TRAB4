@@ -1,0 +1,80 @@
+== declarar grafos
+
+=declararparm   grafo1  int 1
+=declararparm   grafo2  int 2
+=declararparm   grafo3  int 3
+=declararparm   grafo4  int 4
+=declararparm   grafo5  int 5
+=declararparm   grafo6  int 6
+=declararparm   grafo7  int 7
+=declararparm   grafo8  int 8
+
+==Declarar Ponteiros
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+==Declarar CondRets
+=declararparm   OK             	int  0
+=declararparm   FatouMemoria    int  1
+=declararparm   Vazio       	int  2
+=declararparm	ArestaJaExiste	int  3
+=declararparm	NoNaoExiste	int  4
+=declararparm	ArestaNaoExiste	int  5
+=declararparm	JaEsta		int 6 
+=declararparm 	CaminhoExiste 	int 7
+=declararparm 	CaminhoNaoExiste int 8
+
+==Declarar Strings
+=declararparm   str0    string  "abcdefg"
+=declararparm   str1    string  "qwerty"
+=declararparm   str2    string  "xxx"
+=declararparm   str3    string  "xpto"
+
+==criar grafo1
+
+=criargrafo grafo1
+
+==ObterVertices no vazio
+=obtervertices grafo1 Vazio
+
+==ObterArestas no vazio
+=obterarestas grafo1 1 Vazio
+
+==Inserir Nos
+=inserirno grafo1 str0 OK
+=inserirno grafo1 str1 OK
+=inserirno grafo1 str0 OK
+=inserirno grafo1 str1 OK
+=inserirno grafo1 str0 OK
+=inserirno grafo1 str1 OK
+=inserirno grafo1 str0 OK
+=inserirno grafo1 str1 OK
+
+==Obtervertices
+=obtervertices grafo1 OK
+
+==ObterArestas num grafo sem arestas
+=obterarestas grafo1 1 ArestaNaoExiste
+=obterarestas grafo1 18 NoNaoExiste
+
+==InserirArestas
+=inseriraresta grafo1 1 2 0 OK
+=inseriraresta grafo1 2 3 0 OK
+=inseriraresta grafo1 4 5 0 OK
+=inseriraresta grafo1 4 7 0 OK
+=inseriraresta grafo1 4 8 0 OK
+
+==ObterArestas em no inexistente
+=obterarestas grafo1 18 NoNaoExiste
+
+==Obter Arestas na real
+=obterarestas grafo1 1 OK
+=obterarestas grafo1 2 OK
+=obterarestas grafo1 3 OK
+=obterarestas grafo1 4 OK
+=obterarestas grafo1 5 OK
+=obterarestas grafo1 6 ArestaNaoExiste
+=obterarestas grafo1 7 OK
+
+==CompararCom Imprimir Grafo
+=imprimirgrafo grafo1 OK

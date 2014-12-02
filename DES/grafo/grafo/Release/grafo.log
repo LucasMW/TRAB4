@@ -1,0 +1,27 @@
+﻿Build started 1/12/2014 20:07:23.
+Project "C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab4\DES\grafo\grafo\grafo.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Creating "Release\trab4.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt grafo.c
+  grafo.c
+Link:
+  C:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab4\DES\grafo\Release\trab4.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\trab4.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab4\DES\grafo\Release\trab4.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab4\DES\grafo\Release\trab4.lib" /MACHINE:X86 Release\grafo.obj
+  Release\lista.obj
+  Release\TESTGRA.obj
+  ArcaboucoTeste.lib
+  Generating code
+c:\documents and settings\administrador\meus documentos\visual studio 2010\projects\modular\trab4\des\grafo\grafo\testgra.c(375): warning C4700: uninitialized local variable 'j' used
+c:\documents and settings\administrador\meus documentos\visual studio 2010\projects\modular\trab4\des\grafo\grafo\testgra.c(375): warning C4700: uninitialized local variable 'i' used
+  Finished generating code
+  grafo.vcxproj -> C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab4\DES\grafo\Release\trab4.exe
+Manifest:
+  C:\Arquivos de programas\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab4\DES\grafo\Release\trab4.exe;#1" /manifest Release\trab4.exe.intermediate.manifest
+FinalizeBuildStatus:
+  Deleting file "Release\trab4.unsuccessfulbuild".
+  Touching "Release\trab4.lastbuildstate".
+Done Building Project "C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab4\DES\grafo\grafo\grafo.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.65

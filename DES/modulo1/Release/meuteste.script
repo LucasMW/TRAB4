@@ -1,0 +1,51 @@
+// Script:    TesteLista.script
+// Autor:     Lucas Menezes Oliveira Sousa
+// Data:      30/ago/2014
+// Propósito: Entender essa chapa
+//
+
+== Inicializar valores
+=declararparm   lista0  int 0
+=declararparm   lista1  int 1
+=declararparm   lista2  int 2
+=declararparm	lista3  int 5
+
+
+=declararparm   str0    string  "abcdefg"
+=declararparm   str1    string  "qwerty"
+=declararparm   str2    string  "xxx"
+=declararparm   str3    string  "xpto"
+=declararparm	str34	string  "Eumesmo"
+=declararparm   strvazia string ""
+=declararparm   strc     string "a"
+
+=declararparm   OK             int  0
+=declararparm   ListaVazia     int  1
+=declararparm   FimLista       int  2
+=declararparm   NaoAchou       int  3
+=declararparm   FaltouMemoria  int  4
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+==Reset
+=resetteste
+==Criar Lista
+=criarlista lista3
+=criarlista lista1
+=criarlista lista2
+
+==InserirElementos
+=inselemantes lista3 str34 OK
+=inselemapos lista3 str34 OK
+=inselemantes lista1    strc OK
+=inselemapos  lista2    strvazia OK
+==OBterValores
+=obtervalorelem lista3 str34 FimLista
+=obtervalorelem lista1 strc  FimLista
+
+== Destruir a lista
+=destruirlista   lista3
+
+
+
+// fim

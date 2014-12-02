@@ -1,0 +1,41 @@
+﻿Build started 13/9/2014 09:25:20.
+Project "C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\modulo1\modulo1.vcxproj" on node 2 (build target(s)).
+PrepareForBuild:
+  Creating directory "C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\Debug\".
+InitializeBuildStatus:
+  Creating "Debug\modulo1.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt LISTA.C TESTLIS.C
+  TESTLIS.C
+c:\documents and settings\administrador\meus documentos\visual studio 2010\projects\modular\trab2\des\modulo1\modulo1\testlis.c(209): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\arquivos de programas\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+c:\documents and settings\administrador\meus documentos\visual studio 2010\projects\modular\trab2\des\modulo1\modulo1\testlis.c(244): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\arquivos de programas\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+  LISTA.C
+  Generating Code...
+ManifestResourceCompile:
+  C:\Arquivos de programas\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\modulo1.exe.embed.manifest.res" Debug\modulo1_manifest.rc 
+Link:
+  C:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\Debug\modulo1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\modulo1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\Debug\modulo1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\Debug\modulo1.lib" /MACHINE:X86 Debug\modulo1.exe.embed.manifest.res
+  Debug\LISTA.obj
+  Debug\TESTLIS.obj
+  ArcaboucoTeste.lib
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+Manifest:
+  C:\Arquivos de programas\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\modulo1.exe.embed.manifest" /manifest Debug\modulo1.exe.intermediate.manifest
+  C:\Arquivos de programas\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\modulo1.exe.embed.manifest.res" Debug\modulo1_manifest.rc 
+LinkEmbedManifest:
+  C:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\Debug\modulo1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\modulo1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\Debug\modulo1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\Debug\modulo1.lib" /MACHINE:X86 Debug\modulo1.exe.embed.manifest.res
+  Debug\LISTA.obj
+  Debug\TESTLIS.obj
+  ArcaboucoTeste.lib
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  modulo1.vcxproj -> C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\Debug\modulo1.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\modulo1.unsuccessfulbuild".
+  Touching "Debug\modulo1.lastbuildstate".
+Done Building Project "C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab2\DES\modulo1\modulo1\modulo1.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.18

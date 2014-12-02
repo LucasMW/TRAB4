@@ -1,0 +1,98 @@
+// Script: TesteContador-Tab.script
+// Autor: LM,LS
+// Data: 01/DEZ/2014
+// Propósito: Controle de cobertura de instrumentação do módulo Grafo
+//
+== Declarar parametros
+=declararparm tab0 int 0
+=declararparm pNaoNull int 1
+=declararparm preto int 0
+=declararparm branco int 1
+=declararparm normal int 0
+=declararparm dama int 1
+=declararparm inval int -1
+== Declarar condicoes de retorno
+=declararparm OK int 0
+=declararparm TabuleiroVazio int 1
+=declararparm PosicaoInvalida int 2
+=declararparm ErroEstrutura int 3
+== Declarar modos de deturpacao
+=declararparm DeturpaTipoTabuleiro int 1
+=declararparm DeturpaTipoColuna int 2
+=declararparm DeturpaTipoLinha int 3
+=declararparm DeturpaTipoElemento int 4
+=declararparm DeturpaPtColunaNulo int 5
+=declararparm DeturpaPtLinhaNulo int 6
+=declararparm DeturpaPtElementoNulo int 7
+=declararparm DeturpaDesencadeiaElemento int 8
+== Iniciar contagem
+=inicializarcontadores ""
+=lercontadores "..\\scripts\\Tabuleiro"
+=iniciarcontagem
+== Verificar tabuleiro
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=verificartabuleiro tab0 OK
+=destruirtabuleiro tab0
+== Deturpar tipo tabuleiro
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=deturpar 0 DeturpaTipoTabuleiro
+=verificartabuleiro tab0 ErroEstrutura
+=AceitaFalhasAcumuladas 1
+=destruirtabuleiro tab0
+== Deturpar tipo coluna
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=deturpar 0 DeturpaTipoColuna
+=verificartabuleiro tab0 ErroEstrutura
+=AceitaFalhasAcumuladas 1
+=destruirtabuleiro tab0
+== Deturpar tipo linha
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=deturpar 0 DeturpaTipoLinha
+=verificartabuleiro tab0 ErroEstrutura
+=AceitaFalhasAcumuladas 1
+=destruirtabuleiro tab0
+== Deturpar tipo elemento
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=deturpar 0 DeturpaTipoElemento
+=verificartabuleiro tab0 ErroEstrutura
+=AceitaFalhasAcumuladas 1
+=destruirtabuleiro tab0
+== Deturpar ponteiro de coluna nulo
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=deturpar 0 DeturpaPtColunaNulo
+=verificartabuleiro tab0 ErroEstrutura
+=AceitaFalhasAcumuladas 1
+=destruirtabuleiro tab0
+== Deturpar ponteiro de linha nulo
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=deturpar 0 DeturpaPtLinhaNulo
+=verificartabuleiro tab0 ErroEstrutura
+=AceitaFalhasAcumuladas 1
+=destruirtabuleiro tab0
+== Deturpar ponteiro elemento nulo
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=deturpar 0 DeturpaPtElementoNulo
+=verificartabuleiro tab0 ErroEstrutura
+=AceitaFalhasAcumuladas 1
+=destruirtabuleiro tab0
+== Deturpar desencadeia elemento
+=criartabuleiro tab0 8 8 pNaoNull
+=incluirpeca tab0 0 0 branco OK
+=deturpar 0 DeturpaDesencadeiaElemento
+=verificartabuleiro tab0 ErroEstrutura
+=AceitaFalhasAcumuladas 1
+=destruirtabuleiro tab0
+== Terminar controle dos contadores
+=pararcontagem
+=verificarcontagens 0
+== Terminar contagem
+=terminarcontadores
+// fim

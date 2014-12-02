@@ -1,0 +1,65 @@
+
+
+LES - Laboratório de Engenharia de Software DI/PUC-Rio
+      Arcabouço de teste de módulos C  (c) 2006
+
+---------------------------------------------
+      Construto sob teste: trab3-3.exe
+
+      Arquivo de teste:    testegrafonovo.script
+
+
+    1  == declarar grafos
+   12  ==Declarar Ponteiros
+   16  ==Declarar CondRets
+   27  ==Declarar Strings
+   33  ==criar grafo1
+   37  ==ObterVertices no vazio
+   40  ==ObterArestas no vazio
+   43  ==Inserir Nos
+   53  ==Obtervertices
+
+ObterVertices: < 1, 2, 3, 4, 5, 6, 7, 8, >
+
+   56  ==ObterArestas num grafo sem arestas
+   60  ==InserirArestas
+   67  ==ObterArestas em no inexistente
+   70  ==Obter Arestas na real
+
+Arestas do vertice 1: < 2, >
+
+
+Arestas do vertice 2: < 1, 3, >
+
+
+Arestas do vertice 3: < 2, >
+
+
+Arestas do vertice 4: < 5, 7, 8, >
+
+
+Arestas do vertice 5: < 4, >
+
+
+Arestas do vertice 7: < 4, >
+
+   79  ==CompararCom Imprimir Grafo
+Vertice 1 Arestas: { 2 } 
+Vertice 2 Arestas: { 1 3 } 
+Vertice 3 Arestas: { 2 } 
+Vertice 4 Arestas: { 5 7 8 } 
+Vertice 5 Arestas: { 4 } 
+Vertice 6 Arestas: NADA
+Vertice 7 Arestas: { 4 } 
+Vertice 8 Arestas: { 4 } 
+
+
+!!! Número de linhas lidas:          80
+!!! Número de casos de teste:        14
+!!! Número comandos corretos:        51
+!!! Número de falhas encontradas:     0
+
+!!! Não foram encontrados problemas
+
+
+!!! Numero de espacos ainda alocados: 0

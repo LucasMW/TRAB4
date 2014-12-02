@@ -1,0 +1,27 @@
+﻿Build started 9/11/2014 02:11:32.
+Project "C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab3\DES\modulo1\modulo1\modulo1.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Creating "Release\lista.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt LISTA.C TESTLIS.C
+  LISTA.C
+  TESTLIS.C
+TESTLIS.C(213): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+TESTLIS.C(248): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+Link:
+  C:\Arquivos de programas\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab3\DES\modulo1\Release\lista.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\lista.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab3\DES\modulo1\Release\lista.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab3\DES\modulo1\Release\lista.lib" /MACHINE:X86 Release\LISTA.obj
+  Release\TESTLIS.obj
+  ArcaboucoTeste.lib
+  Generating code
+  Finished generating code
+  modulo1.vcxproj -> C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab3\DES\modulo1\Release\lista.exe
+Manifest:
+  C:\Arquivos de programas\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab3\DES\modulo1\Release\lista.exe;#1" /manifest Release\lista.exe.intermediate.manifest
+FinalizeBuildStatus:
+  Deleting file "Release\lista.unsuccessfulbuild".
+  Touching "Release\lista.lastbuildstate".
+Done Building Project "C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2010\Projects\modular\trab3\DES\modulo1\modulo1\modulo1.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.44

@@ -1,0 +1,31 @@
+#if ! defined( TIPOS_GRAFO_ )
+#define TIPOS_GRAFO_
+/***************************************************************************
+*
+* $MCD Arquivo de definição: TipoEspacosGrafo.def
+*
+* Projeto: INF 1301 / 1628 
+* Gestor: LES/DI/PUC-Rio
+* Autores: Lucas Menezes (LM); Lorenzo Saraiva (LS); Felipe Santos(FS).
+*
+* $ED Descrição do arquivo
+* Este arquivo declara os identificadores de tipos dos espaços de dados
+* utilizados pelo módulo Grafo. O módulo obedece o padrão estabelecido
+* pelo módulo CNTESPAC. Ou seja, contém uma seqüência de declaradores
+* a serem incluídos em um enum. Cada declarador corresponde a um dos
+* tipos de espaço de dados.
+*
+***************************************************************************/
+typedef enum
+{
+CED_ID_TIPO_VALOR_NULO = 0,
+GRA_TipoEspacoGrafo = 1,
+GRA_TipoEspacoVertice= 2,
+GRA_TipoEspacoAresta = 3,
+GRA_TipoEspacoLista = 4,
+GRA_TipoEspacoInteiro= 5,
+GRA_TipoEspacoElemento= 6,
+CED_ID_TIPO_ILEGAL = 999
+} CED_tpIdTipoEspaco ;
+/********** Fim do arquivo de definição: TiposEspacosGrafo.def **********/
+#endif

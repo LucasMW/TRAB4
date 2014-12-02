@@ -1,0 +1,9 @@
+
+
+LES - Laboratório de Engenharia de Software DI/PUC-Rio
+      Arcabouço de teste de módulos C  (c) 2006
+
+---------------------------------------------
+      Construto sob teste: trab2grafo.exe
+
+>>>   Nao foi possivel abrir arquivo script: testegrafo3.script
